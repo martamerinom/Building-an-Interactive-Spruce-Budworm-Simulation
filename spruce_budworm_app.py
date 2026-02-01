@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # Import your functions from SESSION_1.py
 from SESSION_1_SECOND_ATTEMPT import (
-    spruce_budworm,
+    #spruce_budworm,
     plot_spruce_budworm_rate,
     evolve_spruce_budworm,
     plot_spruce_budworm
@@ -51,9 +51,9 @@ st.write(f"Current parameters: r = {r:.2f}, k = {k:.2f}")
 
 # Plot phase portrait
 st.subheader("Phase Portrait (dx/dt vs x)")
-plot_spruce_budworm_rate(xt=400, r=r, k=k)  # this currently calls plt.show() in your code
-st.pyplot(plt.gcf())
-plt.clf()
+fig1, ax1 = plot_spruce_budworm_rate(xt=400, r=r, k=k)
+st.pyplot(fig1)
+
 
 # Plot time series
 st.subheader("Time Series (x vs t)")
